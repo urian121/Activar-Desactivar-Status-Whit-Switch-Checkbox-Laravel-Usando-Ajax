@@ -10,31 +10,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/cargando.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/maquinawrite.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/switch.css') }}">
-  <style> 
-        table tr th{
-            background:#f39c12;
-            color: azure;
-        }
-        h3{
-            color:coral; 
-            font-weight: 900;
-            margin-top: 100px;
-        }
-        a:hover{
-            cursor: pointer;
-            color: #333 !important;
-        }
-        .zmdi:hover{
-          color: green;
-          cursor: pointer;
-        }
-        #portadaNoti{
-            width: 100%;
-            width: 100px;
-            height:70px;
-            border-radius: 5px;
-        }
-      </style>
+  <link rel="stylesheet" href="{{ asset('css/cssGeneral.css') }} ">
 </head>
 <body>
 
@@ -111,12 +87,7 @@
 
 </div>
 
-<!--Active Inactive Status Using Toggle Button/Slide laravel 8
-How to Active and Inactive Status in Laravel? - HDTuto.com
-Update User Status Using Toggle Button Example
-How to Active and Inactive Status in Laravel 7/6?
-How to Active and Inactive Status in Laravel
-Active Inactive Status Using Toggle whit Laravel -->
+
 
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/popper.min.js') }}"></script>
@@ -130,6 +101,7 @@ Active Inactive Status Using Toggle whit Laravel -->
 
 
 $('.mi_checkbox').change(function() {
+    //Verifico el estado del checkbox, si esta seleccionado sera igual a 1 de lo contrario sera igual a 0
     var estatus = $(this).prop('checked') == true ? 1 : 0; 
     var id = $(this).data('id'); 
         console.log(estatus);
